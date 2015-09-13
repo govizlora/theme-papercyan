@@ -8,8 +8,8 @@ Copy `papercyan.css` file to `resources/app/assets/themes/papercyan/css/papercya
 
 v1.1:
 
-- Completed quests are marked out from other quests with dotted border.
-- Fleets on expedition are marked out.
+- Completed quests are marked with dotted border.
+- Fleets on expedition are marked with dotted underline.
 - The color of "中破" condition is changed from pink to dark cyan, avoiding confusion with "大破".
 - Fixed a bug where damaged aircraft slots dont show red color.
 - Increased overall contrast between text and background.
