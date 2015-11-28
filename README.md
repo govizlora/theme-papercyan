@@ -6,6 +6,14 @@ Copy `papercyan.css` file to `resources/app/assets/themes/papercyan/css/papercya
 
 # Update
 
+v1.2:
+(11/27/2015)
+
+- The difference between middle damaged and big damaged ship is now more obvious.
+- Distinction between 50% and 80% completed quests.
+- Distinction for ships locked in different maps.
+- Minor UI changes.
+
 v1.1:
 
 - Completed quests are marked with dotted border.
