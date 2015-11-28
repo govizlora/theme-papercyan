@@ -1,4 +1,4 @@
-// papercyan remake
+// papercyan 1.2
 // Bootswatch
 // Govizlora
 // -----------------------------------------------------
@@ -43,23 +43,23 @@
   .btn-@{class} {
     background-size: 200%;
     background-position: 50%;
-	background-color: lighten(@cell-bg,3%);
+	background-color: @btn-background-color;
 	.box-shadow(inset 0 -2px 0 @bg);
+	/*
     &:focus {
       background-color: @bg;
-    }
-
+    }*/
+	/*
     &:hover,
     &:active:hover {
       background-color: @bg;
     }
 
     &:active {
-      background-color: @bg;
-      //#gradient > .radial(darken(@bg, 12%) 10%, @bg 11%);
+      background-color: darken(@bg, 5%);
       background-size: 1000%;
-      //.box-shadow(2px 2px 4px rgba(0,0,0,.4));
     }
+	*/
   }
 }
 
@@ -72,11 +72,8 @@
 #btn(link,@btn-primary-bg);
 
 .btn {
-  //text-transform: uppercase;
   border: none;
-  //.box-shadow(1px 1px 4px rgba(0,0,0,.4));
-  .transition(all @transition-time-long);
-
+  .transition(all @transition-time-short);
   &-link {
     border-radius: @btn-border-radius-base;
     .box-shadow(none);
@@ -89,7 +86,6 @@
       text-decoration: none;
     }
   }
-
   &-default {
 
     &.disabled {
@@ -104,31 +100,29 @@
   color: @color;
   background-color: @background;
   border-color: @border;
-
   &:focus,
   &.focus {
-    color: #fff;
-    background-color: @background;
-        border-color: transparent;
+    color: @color;
+    background-color: @btn-background-color;
+    border-color: transparent;
   }
   &:hover {
-    color: @color;
-    background-color: @background;
-        border-color: transparent;
+    color: @background;
+    background-color: @btn-background-color;
+    border-color: transparent;
   }
   &:active,
   &.active,
   .open > .dropdown-toggle& {
     color: #fff;
     background-color: @background;
-        border-color: transparent;
-
+    border-color: transparent;
     &:hover,
     &:focus,
     &.focus {
       color: #fff;
       background-color: @background;
-          border-color: transparent;
+      border-color: transparent;
     }
   }
   &:active,
@@ -577,14 +571,21 @@ input[type="checkbox"],
 	background-color: @cell-bg;
 	color: @text-color;
 	.box-shadow(inset 0 -2px 0 @brand-primary);
-
     // Links rendered as pills
     > a {
       border-radius: @nav-pills-border-radius;
 	  color: @text-color;
+	  .box-shadow(inset 0 -2px 0 @brand-primary);
 	  &:hover,
 	  &:focus {
-	    color: #fff;
+	    color: @nav-pills-active-link-hover-bg;
+        background-color: @cell-bg;
+		.box-shadow(inset 0 -2px 0 @brand-primary);
+	  }
+	  &:active {
+		color: @nav-pills-active-link-hover-color;
+		background-color: @nav-pills-active-link-hover-bg;
+		.box-shadow(inset 0 -2px 0 @brand-primary);
 	  }
     }
     + li {
@@ -593,11 +594,11 @@ input[type="checkbox"],
 
     // Active state
     &.active > a {
-      &,
-      &:hover,
+	  .box-shadow(inset 0 -2px 0 @brand-primary);
+	  &:hover,
       &:focus {
-        color: @nav-pills-active-link-hover-color;
-        background-color: @nav-pills-active-link-hover-bg;
+		color: @nav-pills-active-link-hover-color;
+		background-color: @nav-pills-active-link-hover-bg;
       }
     }
   }
@@ -650,15 +651,18 @@ input[type="checkbox"],
   height: 6px;
   border-radius: 0;
 
+
   .box-shadow(none);
 
   &-bar {
     .box-shadow(none);
-
     &:last-child {
       border-radius: 0;
     }
-
+	&-warning {
+	  #gradient > .striped();
+	  background-size: 40px 40px;
+	}
     &:last-child {
       &:before {
         display: block;
@@ -885,11 +889,35 @@ poi-app poi-nav poi-nav-tabs .btn-group {
 
 //For completed quests
 
+poi-app poi-nav poi-nav-tabs .label-success.mission-timer {
+	border: 1px solid @brand-success;
+	border-radius: 0px;
+}
+//Expedition success
+
 poi-app poi-nav poi-nav-tabs .label-success.quest-progress {
+	border: 1px solid @brand-success;
+	border-radius: 0px;
+}
+//Quest Success
+
+/*poi-app poi-nav poi-nav-tabs .label-primary.quest-progress {
+	border: 1px dotted @brand-success;
+	border-radius: 0px;
+}*/
+//Quest 50% - 80%
+
+poi-app poi-nav poi-nav-tabs .label-info.quest-progress {
 	border: 1px dotted @brand-success;
 	border-radius: 0px;
 }
+//Quest 80% - 99%
 
 poi-app poi-nav poi-nav-tabs .alert.alert-info {
     color: @text-color !important;
 }
+
+poi-app poi-nav poi-nav-tabs div.status-label .label-info {
+    color: @brand-warning;
+}
+//E1 E2 E3
