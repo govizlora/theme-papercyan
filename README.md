@@ -1,5 +1,5 @@
 # Theme-papercyan
-A theme for poi. Based on "paper" in Bootswatch.
+A theme for [poi](https://github.com/poooi/poi). Based on "paper" in Bootswatch.
 
 # Usage
 Copy `papercyan.css` file to `resources/app/assets/themes/papercyan/css/papercyan.css`
