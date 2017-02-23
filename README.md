@@ -17,7 +17,7 @@ v1.1:
 
 - Completed quests are marked with dotted border.
 - Fleets on expedition are marked with dotted underline.
-- The color of "中破" condition is changed from pink to dark cyan, avoiding confusion with "大破".
+- The color of "Moderate damage" condition is changed from pink to dark cyan, avoiding confusion with "Heavy damage".
 - Fixed a bug where damaged aircraft slots dont show red color.
 - Increased overall contrast between text and background.
 - Minor fixes.
