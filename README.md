@@ -22,6 +22,6 @@ v1.1:
 - Increased overall contrast between text and background.
 - Minor fixes.
 
-#Example
+# Example
 
 ![Alt text](/Example.jpg?raw=true "example")
