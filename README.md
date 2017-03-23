@@ -21,3 +21,7 @@ v1.1:
 - Fixed a bug where damaged aircraft slots dont show red color.
 - Increased overall contrast between text and background.
 - Minor fixes.
+
+#Example
+
+![Alt text](/Example.jpg?raw=true "example")
